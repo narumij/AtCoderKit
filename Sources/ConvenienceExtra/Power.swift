@@ -1,5 +1,5 @@
 import BigInt
-import AcFoundation
+import Convenience
 
 /// lhsのrhs乗
 ///
