@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
   name: "AtCoderKit",
+  platforms: [.macOS(.v15)],
   products: [
     .library(name: "AtCoderKit", targets: ["AtCoderKit"])
   ],
@@ -18,6 +19,23 @@ let package = Package(
     .package(url: "https://github.com/apple/swift-numerics", from: "1.1.1"),
   ],
   targets: [
+    .target(name: "Power"),
+    .target(name: "Multiply"),
+    .target(
+      name: "BigIntExtra",
+      dependencies: [
+        "Power",
+        .product(name: "AcFoundation", package: "swift-ac-foundation"),
+        .product(name: "BigInt", package: "BigInt"),
+      ]
+    ),
+    .target(
+      name: "BigNumExtra",
+      dependencies: [
+        .product(name: "AcFoundation", package: "swift-ac-foundation"),
+        .product(name: "BigNum", package: "swift-bignum"),
+      ]
+    ),
     .target(
       name: "AtCoderKit",
       dependencies: [
@@ -31,6 +49,20 @@ let package = Package(
         .product(name: "Numerics", package: "swift-numerics"),
       ]
     ),
-    .testTarget(name: "AtCoderKitTests", dependencies: ["AtCoderKit"]),
+    .testTarget(
+      name: "AtCoderKitTests",
+      dependencies: [
+        "AtCoderKit",
+        .product(name: "TestingUtil", package: "swift-ac-foundation"),
+      ]
+    ),
+    .testTarget(
+      name: "BigIntExtraTests",
+      dependencies: [
+        "BigIntExtra",
+        .product(name: "BigInt", package: "BigInt"),
+        .product(name: "TestingUtil", package: "swift-ac-foundation"),
+      ]
+    ),
   ]
 )
