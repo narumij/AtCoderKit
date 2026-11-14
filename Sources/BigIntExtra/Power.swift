@@ -1,5 +1,5 @@
 import BigInt
-import Convenience
+import Power
 
 /// lhsのrhs乗
 ///
