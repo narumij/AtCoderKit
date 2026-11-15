@@ -1,6 +1,7 @@
 @_exported import AcFoundation
 @_exported import AcCollections
 @_exported import AtCoder
+@_exported import ModIntExtra
 //@_exported import BigInt
 @_exported import BigNum
 @_exported import Collections
