@@ -11,10 +11,10 @@ final class ExportsTests: XCTestCase {
     XCTAssertEqual(Array(deque), [1, 2, 3])
     XCTAssertEqual(Array([1, 2, 3].adjacentPairs()).count, 2)
     XCTAssertEqual(Complex<Double>(1, 2).real, 1)
-    XCTAssertEqual(BigNum.BigInt(2) + BigNum.BigInt(3), BigNum.BigInt(5))
+    XCTAssertEqual(BigInt(2) + BigInt(3), BigInt(5))
     var dsu = DSU(3)
-    dsu.merge(0, 1)
+    _ = dsu.merge(0, 1)
     XCTAssertTrue(dsu.same(0, 1))
-    XCTAssertEqual(BigInt.BigInt(2) + BigInt.BigInt(3), BigInt.BigInt(5))
+    XCTAssertEqual(BigInt(2) + BigInt(3), BigInt(5))
   }
 }
