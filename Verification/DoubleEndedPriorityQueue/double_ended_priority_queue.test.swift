@@ -4,8 +4,9 @@ import AtCoderKit
 @main
 struct DoubleEndedPriorityQueue {
   static func main() {
-    let n = Int.stdin, q = Int.stdin
-    var set = RedBlackTreeMultiSet((0..<n).map { _ in Int.stdin })
+    let header = [Int].stdin()
+    let q = header[1]
+    var set = RedBlackTreeMultiSet<Int>.stdin(columns: header[0])
     for _ in 0..<q {
       switch Int.stdin {
       case 0: set.insert(Int.stdin)
