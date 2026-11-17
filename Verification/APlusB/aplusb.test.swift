@@ -5,6 +5,6 @@ import AtCoderKit
 struct APlusB {
   static func main() {
     let a = Int.stdin, b = Int.stdin
-    [a + b].print()
+    print(a + b)
   }
 }

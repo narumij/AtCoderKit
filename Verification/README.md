@@ -1,6 +1,6 @@
 # AtCoderKitのLibrary Checker検証
 
-practice2の出典になっているLibrary Checkerの7問と、赤黒木向けの3問、入出力向けの3問を、`import AtCoderKit`だけで解きます。IOReaderの`stdin`とIOWriterの配列・列の`print`を使用し、独自の入出力処理は持ち込みません。ModIntの入力もAtCoderKitの拡張を使います。
+practice2の出典になっているLibrary Checkerの7問と、赤黒木向けの3問、入出力向けの3問を、`import AtCoderKit`だけで解きます。IOReaderの`stdin`を使用し、単一の答えはその場で`print`、配列の計算結果はIOWriterの`print`で出力します。出力用の配列には溜めず、独自の入出力処理は持ち込みません。ModIntの入力もAtCoderKitの拡張を使います。
 
 | practice2 | Library Checker | 使用機能 |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ practice2の出典になっているLibrary Checkerの7問と、赤黒木向け�
 
 | Library Checker | 使用機能 |
 | --- | --- |
-| [A + B](https://judge.yosupo.jp/problem/aplusb) | Int.stdinとIOWriterのprintによる基本の入出力 |
+| [A + B](https://judge.yosupo.jp/problem/aplusb) | Int.stdinとprintによる基本の入出力 |
 | [Many A + B](https://judge.yosupo.jp/problem/many_aplusb) | 最大100万組、各値10^18までの整数入出力 |
 | [Many A + B (128 bit)](https://judge.yosupo.jp/problem/many_aplusb_128bit) | 最大50万組、負数を含むInt128.stdinと出力 |
 

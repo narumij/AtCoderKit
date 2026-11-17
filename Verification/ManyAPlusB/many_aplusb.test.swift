@@ -5,12 +5,9 @@ import AtCoderKit
 struct ManyAPlusB {
   static func main() {
     let t = Int.stdin
-    var output: [Int] = []
-    output.reserveCapacity(t)
     for _ in 0..<t {
       let a = Int.stdin, b = Int.stdin
-      output.append(a + b)
+      print(a + b)
     }
-    output.print(separator: "\n")
   }
 }

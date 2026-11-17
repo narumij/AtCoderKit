@@ -5,11 +5,9 @@ import AtCoderKit
 struct SumOfFloorOfLinear {
   static func main() {
     let t = Int.stdin
-    var output: [Int] = []
     for _ in 0..<t {
       let n = Int.stdin, m = Int.stdin, a = Int.stdin, b = Int.stdin
-      output.append(floor_sum(n, m, a, b))
+      print(floor_sum(n, m, a, b))
     }
-    output.print(separator: "\n")
   }
 }
