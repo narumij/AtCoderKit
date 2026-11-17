@@ -15,11 +15,9 @@ struct PredecessorProblem {
       case 1: set.remove(key)
       case 2: print(set.contains(key) ? 1 : 0)
       case 3:
-        let index = set.lowerBound(key)
-        print(index == set.endIndex ? -1 : set[index])
+        print(set[.lowerBound(key)] ?? -1)
       default:
-        let index = set.upperBound(key)
-        print(index == set.startIndex ? -1 : set[set.index(before: index)])
+        print(set[.upperBound(key).before] ?? -1)
       }
     }
   }
