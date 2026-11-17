@@ -20,11 +20,18 @@ enum AffineSum: LazySegTreeOperator {
   }
 }
 
+extension AffineSum.S: IOConversion, IOReader.Numeric {
+  static func read() throws -> Self {
+    .init(sum: try readTuple() as Mint, count: 1)
+  }
+}
+
 @main
 struct RangeAffineRangeSum {
   static func main() {
-    let n = Int.stdin, q = Int.stdin
-    let values = (0..<n).map { _ in AffineSum.S(sum: Mint.stdin, count: 1) }
+    let header = [Int].stdin()
+    let q = header[1]
+    let values = [AffineSum.S].stdin()
     var tree = LazySegTree<AffineSum>(values)
     for _ in 0..<q {
       let t = Int.stdin, l = Int.stdin, r = Int.stdin

@@ -4,9 +4,9 @@ import AtCoderKit
 @main
 struct PredecessorProblem {
   static func main() {
-    let _ = Int.stdin
-    let q = Int.stdin
-    let bits = Array(String.stdin.utf8)
+    let header = [Int].stdin()
+    let q = header[1]
+    let bits = [UInt8].readLine()
     var set = RedBlackTreeSet(bits.enumerated().lazy.filter { $0.element == 49 }.map { $0.offset })
     for _ in 0..<q {
       let type = Int.stdin, key = Int.stdin
