@@ -12,6 +12,9 @@ case "$1" in
   Verification/PredecessorProblem/predecessor_problem.test.swift) product=PredecessorProblem ;;
   Verification/DoubleEndedPriorityQueue/double_ended_priority_queue.test.swift) product=DoubleEndedPriorityQueue ;;
   Verification/AssociativeArray/associative_array.test.swift) product=AssociativeArray ;;
+  Verification/APlusB/aplusb.test.swift) product=APlusB ;;
+  Verification/ManyAPlusB/many_aplusb.test.swift) product=ManyAPlusB ;;
+  Verification/ManyAPlusB128/many_aplusb_128bit.test.swift) product=ManyAPlusB128 ;;
   *) echo "Unknown verification source: $1" >&2; exit 1 ;;
 esac
 swift build --package-path Verification -c release --product "$product"

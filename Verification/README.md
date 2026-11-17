@@ -1,6 +1,6 @@
 # AtCoderKitのLibrary Checker検証
 
-practice2の出典になっているLibrary Checkerの7問と、赤黒木向けの3問を、`import AtCoderKit`だけで解きます。IOReaderの`stdin`とIOWriterの配列・列の`print`を使用し、独自の入出力処理は持ち込みません。ModIntの入力もAtCoderKitの拡張を使います。
+practice2の出典になっているLibrary Checkerの7問と、赤黒木向けの3問、入出力向けの3問を、`import AtCoderKit`だけで解きます。IOReaderの`stdin`とIOWriterの配列・列の`print`を使用し、独自の入出力処理は持ち込みません。ModIntの入力もAtCoderKitの拡張を使います。
 
 | practice2 | Library Checker | 使用機能 |
 | --- | --- | --- |
@@ -11,6 +11,14 @@ practice2の出典になっているLibrary Checkerの7問と、赤黒木向け�
 | G | [Strongly Connected Components](https://judge.yosupo.jp/problem/scc) | SCCGraph |
 | I | [Number of Substrings](https://judge.yosupo.jp/problem/number_of_substrings) | suffix_array / lcp_array |
 | K | [Range Affine Range Sum](https://judge.yosupo.jp/problem/range_affine_range_sum) | LazySegTree / static_modint |
+
+## 入出力の検証
+
+| Library Checker | 使用機能 |
+| --- | --- |
+| [A + B](https://judge.yosupo.jp/problem/aplusb) | Int.stdinとIOWriterのprintによる基本の入出力 |
+| [Many A + B](https://judge.yosupo.jp/problem/many_aplusb) | 最大100万組、各値10^18までの整数入出力 |
+| [Many A + B (128 bit)](https://judge.yosupo.jp/problem/many_aplusb_128bit) | 最大50万組、負数を含むInt128.stdinと出力 |
 
 ## 赤黒木の検証
 
@@ -35,6 +43,6 @@ python -m pip install -r Verification/requirements.txt
 bash Verification/run.sh
 ```
 
-解答は独立した検証用パッケージでReleaseビルドします。通常の製品ターゲットに検証用依存は追加しません。毎回検証済み記録を消して全10問を再実行します。1ケース10秒はCI用の制限で、公式ジャッジでの時間保証ではありません。
+解答は独立した検証用パッケージでReleaseビルドします。通常の製品ターゲットに検証用依存は追加しません。毎回検証済み記録を消して全13問を再実行します。1ケース10秒はCI用の制限で、公式ジャッジでの時間保証ではありません。
 
 GitHub ActionsのLibrary Checkerはmainへのpush、main向けPR、手動実行が対象です。ログは`library-checker-diagnostics`に保存します。SwiftPMの検証用Package.resolvedは生成物とし、CIではマニフェストに従って依存を解決します。

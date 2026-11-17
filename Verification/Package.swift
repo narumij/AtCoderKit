@@ -1,7 +1,7 @@
 // swift-tools-version: 6.2
 import PackageDescription
 
-let problems = ["UnionFind", "PointAddRangeSum", "SumOfFloorOfLinear", "Convolution", "StronglyConnectedComponents", "NumberOfSubstrings", "RangeAffineRangeSum", "PredecessorProblem", "DoubleEndedPriorityQueue", "AssociativeArray"]
+let problems = ["UnionFind", "PointAddRangeSum", "SumOfFloorOfLinear", "Convolution", "StronglyConnectedComponents", "NumberOfSubstrings", "RangeAffineRangeSum", "PredecessorProblem", "DoubleEndedPriorityQueue", "AssociativeArray", "APlusB", "ManyAPlusB", "ManyAPlusB128"]
 let package = Package(
   name: "AtCoderKitVerification",
   platforms: [.macOS(.v15)],
