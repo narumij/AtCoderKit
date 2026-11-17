@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/sum_of_floor_of_linear
 import AtCoderKit
+import IOUtil
 
 @main
 struct SumOfFloorOfLinear {
@@ -7,7 +8,7 @@ struct SumOfFloorOfLinear {
     let t = Int.stdin
     for _ in 0..<t {
       let n = Int.stdin, m = Int.stdin, a = Int.stdin, b = Int.stdin
-      print(floor_sum(n, m, a, b))
+      fastPrint(floor_sum(n, m, a, b))
     }
   }
 }

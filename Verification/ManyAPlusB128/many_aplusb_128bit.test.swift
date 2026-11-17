@@ -7,7 +7,7 @@ struct ManyAPlusB128 {
     let t = Int.stdin
     for _ in 0..<t {
       let a = Int128.stdin, b = Int128.stdin
-      print(a + b)
+      fastPrint(a + b)
     }
   }
 }

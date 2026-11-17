@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/scc
 import AtCoderKit
+import IOUtil
 
 @main
 struct StronglyConnectedComponents {
@@ -11,10 +12,10 @@ struct StronglyConnectedComponents {
       graph.add_edge(from, to)
     }
     let groups = graph.scc()
-    print(groups.count)
+    fastPrint(groups.count)
     for group in groups {
-      print(group.count, terminator: " ")
-      group.print()
+      fastPrint(group.count, terminator: 0x20)
+      group.fastPrint()
     }
   }
 }

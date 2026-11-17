@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/double_ended_priority_queue
 import AtCoderKit
+import IOUtil
 
 @main
 struct DoubleEndedPriorityQueue {
@@ -9,8 +10,8 @@ struct DoubleEndedPriorityQueue {
     for _ in 0..<q {
       switch Int.stdin {
       case 0: set.insert(Int.stdin)
-      case 1: print(set.popFirst()!)
-      default: print(set.popLast()!)
+      case 1: fastPrint(set.popFirst()!)
+      default: fastPrint(set.popLast()!)
       }
     }
   }

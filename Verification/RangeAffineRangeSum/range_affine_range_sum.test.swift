@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_affine_range_sum
 import AtCoderKit
+import IOUtil
 
 typealias Mint = modint998244353
 
@@ -39,7 +40,7 @@ struct RangeAffineRangeSum {
         let b = Int.stdin, c = Int.stdin
         tree.apply(l, r, AffineSum.F(a: Mint(b), b: Mint(c)))
       } else {
-        print(Int(tree.prod(l, r).sum.val))
+        fastPrint(Int(tree.prod(l, r).sum.val))
       }
     }
   }

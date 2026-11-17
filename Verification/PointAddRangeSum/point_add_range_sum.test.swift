@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_add_range_sum
 import AtCoderKit
+import IOUtil
 
 @main
 struct PointAddRangeSum {
@@ -10,7 +11,7 @@ struct PointAddRangeSum {
     for _ in 0..<q {
       let t = Int.stdin, a = Int.stdin, b = Int.stdin
       if t == 0 { tree.add(a, b) }
-      else { print(tree.sum(a, b)) }
+      else { fastPrint(tree.sum(a, b)) }
     }
   }
 }

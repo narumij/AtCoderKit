@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/convolution_mod
 import AtCoderKit
+import IOUtil
 
 @main
 struct Convolution {
@@ -8,6 +9,6 @@ struct Convolution {
     let a = [Int].stdin()
     let b = [Int].stdin()
     let result = convolution(mod_998_244_353.self, a, b)
-    result.print()
+    result.fastPrint()
   }
 }
