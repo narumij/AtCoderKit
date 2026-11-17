@@ -11,6 +11,7 @@ case "$1" in
   Verification/RangeAffineRangeSum/range_affine_range_sum.test.swift) product=RangeAffineRangeSum ;;
   Verification/PredecessorProblem/predecessor_problem.test.swift) product=PredecessorProblem ;;
   Verification/DoubleEndedPriorityQueue/double_ended_priority_queue.test.swift) product=DoubleEndedPriorityQueue ;;
+  Verification/DoubleEndedPriorityQueueHeap/double_ended_priority_queue_heap.test.swift) product=DoubleEndedPriorityQueueHeap ;;
   Verification/AssociativeArray/associative_array.test.swift) product=AssociativeArray ;;
   Verification/APlusB/aplusb.test.swift) product=APlusB ;;
   Verification/ManyAPlusB/many_aplusb.test.swift) product=ManyAPlusB ;;
