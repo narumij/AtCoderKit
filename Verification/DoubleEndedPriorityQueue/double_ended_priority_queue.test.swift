@@ -10,8 +10,7 @@ struct DoubleEndedPriorityQueue {
       switch Int.stdin {
       case 0: set.insert(Int.stdin)
       case 1: print(set.popFirst()!)
-      case 2: print(set.popLast()!)
-      default: preconditionFailure("Unknown query")
+      default: print(set.popLast()!)
       }
     }
   }
