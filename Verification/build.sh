@@ -9,6 +9,9 @@ case "$1" in
   Verification/StronglyConnectedComponents/scc.test.swift) product=StronglyConnectedComponents ;;
   Verification/NumberOfSubstrings/number_of_substrings.test.swift) product=NumberOfSubstrings ;;
   Verification/RangeAffineRangeSum/range_affine_range_sum.test.swift) product=RangeAffineRangeSum ;;
+  Verification/PredecessorProblem/predecessor_problem.test.swift) product=PredecessorProblem ;;
+  Verification/DoubleEndedPriorityQueue/double_ended_priority_queue.test.swift) product=DoubleEndedPriorityQueue ;;
+  Verification/AssociativeArray/associative_array.test.swift) product=AssociativeArray ;;
   *) echo "Unknown verification source: $1" >&2; exit 1 ;;
 esac
 swift build --package-path Verification -c release --product "$product"
