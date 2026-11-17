@@ -4,3 +4,9 @@
 
 # Local task and document Studio
 /Maintanance/
+
+# Generated Library Checker verification files
+/.verify-helper/cache/
+/.verify-helper/logs/
+/.verify-helper/timestamps*.json
+/.verify-helper/.gitignore
