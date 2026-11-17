@@ -1,5 +1,6 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/many_aplusb
 import AtCoderKit
+import IOUtil
 
 @main
 struct ManyAPlusB {
@@ -7,7 +8,7 @@ struct ManyAPlusB {
     let t = Int.stdin
     for _ in 0..<t {
       let a = Int.stdin, b = Int.stdin
-      print(a + b)
+      fastPrint(a + b)
     }
   }
 }
