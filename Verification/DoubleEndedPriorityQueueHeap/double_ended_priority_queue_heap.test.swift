@@ -5,7 +5,7 @@ import AtCoderKit
 struct DoubleEndedPriorityQueueHeap {
   static func main() {
     let n = Int.stdin, q = Int.stdin
-    var heap = Heap((0..<n).lazy.map { _ in Int.stdin })
+    var heap = Heap<Int>.stdin(columns: n)
     for _ in 0..<q {
       switch Int.stdin {
       case 0: heap.insert(Int.stdin)
