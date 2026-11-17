@@ -21,8 +21,8 @@ enum AffineSum: LazySegTreeOperator {
 }
 
 extension AffineSum.S: IOConversion, IOReader.Numeric {
-  static func read() throws -> Self {
-    .init(sum: try readTuple() as Mint, count: 1)
+  static func read() throws -> (value: Self, separator: UInt8?) {
+    try readTuple { (value: Mint) in Self(sum: value, count: 1) }
   }
 }
 
