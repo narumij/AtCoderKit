@@ -1,0 +1,51 @@
+import AtCoderKit
+import TestingUtil
+import XCTest
+
+// 公式入力例の転載許諾を得ていないため、自作のダミーデータを使用しています。
+// https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bz
+final class TessokuInputTestsB01: XCTestCase {
+  func readInput() -> Any {
+    let (A, B): (Int, Int) = stdin()
+    return (A, B)
+  }
+
+  let example1 = """
+    11 11
+    """
+
+  let example2 = """
+    18 18
+    """
+
+  let example3 = """
+    25 25
+    """
+
+  func testExample1() throws {
+    try SolverRunner(solver: {
+      let (A, B) = self.readInput() as! (Int, Int)
+
+      XCTAssertEqual(A, 11)
+      XCTAssertEqual(B, 11)
+    }).inputOnly(example1)
+  }
+
+  func testExample2() throws {
+    try SolverRunner(solver: {
+      let (A, B) = self.readInput() as! (Int, Int)
+
+      XCTAssertEqual(A, 18)
+      XCTAssertEqual(B, 18)
+    }).inputOnly(example2)
+  }
+
+  func testExample3() throws {
+    try SolverRunner(solver: {
+      let (A, B) = self.readInput() as! (Int, Int)
+
+      XCTAssertEqual(A, 25)
+      XCTAssertEqual(B, 25)
+    }).inputOnly(example3)
+  }
+}
