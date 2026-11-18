@@ -37,16 +37,25 @@ let package = Package(
       ]
     ),
     .target(
-      name: "ModIntExtra",
+      name: "ACLExtra",
       dependencies: [
         .product(name: "AcFoundation", package: "swift-ac-foundation"),
         .product(name: "AtCoder", package: "swift-ac-library"),
       ]
     ),
     .target(
+      name: "CollectionsExtra",
+      dependencies: [
+        .product(name: "AcFoundation", package: "swift-ac-foundation"),
+        .product(name: "AcCollections", package: "swift-ac-collections"),
+        .product(name: "Collections", package: "swift-collections"),
+      ]
+    ),
+    .target(
       name: "AtCoderKit",
       dependencies: [
-        "ModIntExtra",
+        "ACLExtra",
+        "CollectionsExtra",
         .product(name: "AcFoundation", package: "swift-ac-foundation"),
         .product(name: "AcCollections", package: "swift-ac-collections"),
         .product(name: "AtCoder", package: "swift-ac-library"),
@@ -73,9 +82,9 @@ let package = Package(
       ]
     ),
     .testTarget(
-      name: "ModIntExtraTests",
+      name: "ACLExtraTests",
       dependencies: [
-        "ModIntExtra",
+        "ACLExtra",
         .product(name: "AtCoder", package: "swift-ac-library"),
         .product(name: "TestingUtil", package: "swift-ac-foundation"),
       ]

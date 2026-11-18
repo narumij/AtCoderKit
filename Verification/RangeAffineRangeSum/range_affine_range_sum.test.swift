@@ -30,10 +30,8 @@ extension AffineSum.S: IOConversion, IOReader.Numeric {
 @main
 struct RangeAffineRangeSum {
   static func main() {
-    let header = [Int].stdin()
-    let q = header[1]
-    let values = [AffineSum.S].stdin()
-    var tree = LazySegTree<AffineSum>(values)
+    let n = Int.stdin, q = Int.stdin
+    var tree = LazySegTree<AffineSum>.stdin(columns: n)
     for _ in 0..<q {
       let t = Int.stdin, l = Int.stdin, r = Int.stdin
       if t == 0 {
