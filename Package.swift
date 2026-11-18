@@ -10,6 +10,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/narumij/swift-ac-foundation", branch: "main"),
+    .package(url: "https://github.com/narumij/swift-ac-miscellaneous", branch: "main"),
     .package(url: "https://github.com/narumij/swift-ac-collections", branch: "main"),
     .package(url: "https://github.com/narumij/swift-ac-library", branch: "main"),
     .package(url: "https://github.com/attaswift/BigInt", from: "5.7.0"),
@@ -56,6 +57,7 @@ let package = Package(
       dependencies: [
         "ACLExtra",
         "CollectionsExtra",
+        .product(name: "Miscellaneous", package: "swift-ac-miscellaneous"),
         .product(name: "AcFoundation", package: "swift-ac-foundation"),
         .product(name: "AcCollections", package: "swift-ac-collections"),
         .product(name: "AtCoder", package: "swift-ac-library"),

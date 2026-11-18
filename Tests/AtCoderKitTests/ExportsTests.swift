@@ -3,6 +3,9 @@ import XCTest
 
 final class ExportsTests: XCTestCase {
   func testExports() {
+    XCTAssertEqual(MOD_998_244_353, 998_244_353)
+    XCTAssertEqual(3.rep { 7 }, [7, 7, 7])
+    XCTAssertEqual(prefixSum([1, 2, 3]), [0, 1, 3, 6])
     let readInteger: () -> Int = { Int.stdin }
     _ = readInteger
     let set = RedBlackTreeSet<Int>([3, 1, 2])
