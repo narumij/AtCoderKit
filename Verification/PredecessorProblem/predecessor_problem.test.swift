@@ -1,14 +1,24 @@
 // verification-helper: PROBLEM https://judge.yosupo.jp/problem/predecessor_problem
 import AtCoderKit
 import IOUtil
+#if canImport(Darwin)
+import Darwin
+#else
+import Glibc
+#endif
 
 @main
 struct PredecessorProblem {
   static func main() {
-    _ = Int.stdin
+    run()
+  }
+
+  nonisolated static func run() {
+    let n = Int.stdin
     let q = Int.stdin
-    let bits = [UInt8].stdin
-    var set = RedBlackTreeSet(bits.enumerated().lazy.filter { $0.element == 49 }.map { $0.offset })
+    var set = RedBlackTreeSet(
+      (0..<n).lazy.filter { _ in getchar_unlocked() == 49 }
+    )
     for _ in 0..<q {
       let type = Int.stdin, key = Int.stdin
       switch type {
